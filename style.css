@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(130deg, #98ecff, #6de0fa);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+.container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.board {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.list {
+  min-height: 400px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.255);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 1rem;
+}
+
+.list h2 {
+  font-size: 1.5rem;
+  color: rgb(58, 31, 31);
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: rgb(235, 146, 146);
+  color: white;
+  border-radius: 5px;
+  padding: 0.8rem 0;
+  cursor: grab;
+}
+
+.card:active {
+  cursor: grabbing;
+  transform: scaleX(1.1);
+}
