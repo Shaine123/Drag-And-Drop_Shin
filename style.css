@@ -29,6 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding-bottom: 1rem;
 }
 
 .list {
@@ -43,6 +44,10 @@ body {
   padding: 1rem;
 }
 
+.list.over {
+  background-color: rgb(214, 211, 211);
+}
+
 .list h2 {
   font-size: 1.5rem;
   color: rgb(58, 31, 31);
@@ -55,9 +60,20 @@ body {
   border-radius: 5px;
   padding: 0.8rem 0;
   cursor: grab;
+  transition: all 0.5s;
 }
 
 .card:active {
   cursor: grabbing;
-  transform: scaleX(1.1);
+  transform: scaleX(1.05);
+}
+
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .list {
+    width: 70%;
+  }
 }
