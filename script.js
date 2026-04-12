@@ -32,17 +32,27 @@ function drop(e) {
 }
 
 function dragEnter(e) {
-  // console.log("test");
-}
+  const listElement = e.target;
 
-function dragEnd(e) {
-  // console.log("end");
+  console.log(listElement);
+
+  listElement.classList.remove("over");
 }
 
 function dragLeave(e) {
-  // console.log("practice");
+  const listElement = e.target;
+
+  listElement.classList.remove("over");
+}
+
+function dragEnd(e) {
+  console.log(e.target);
 }
 
 function dragOver(e) {
   e.preventDefault();
+
+  const listElement = e.target;
+
+  listElement.classList.add("over");
 }
