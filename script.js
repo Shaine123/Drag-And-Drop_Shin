@@ -16,13 +16,13 @@ for (const card of cards) {
 function dragStart(e) {
   const id = e.target.id;
 
-  console.log(id);
-
   e.dataTransfer.setData("text/plain", id);
 }
 
 function drop(e) {
   e.preventDefault();
+
+  e.target.classList.remove("over");
 
   const data = e.dataTransfer.getData("text/plain");
 
@@ -34,9 +34,7 @@ function drop(e) {
 function dragEnter(e) {
   const listElement = e.target;
 
-  console.log(listElement);
-
-  listElement.classList.remove("over");
+  listElement.classList.add("over");
 }
 
 function dragLeave(e) {
@@ -46,13 +44,9 @@ function dragLeave(e) {
 }
 
 function dragEnd(e) {
-  console.log(e.target);
+  console.log("ended");
 }
 
 function dragOver(e) {
   e.preventDefault();
-
-  const listElement = e.target;
-
-  listElement.classList.add("over");
 }
